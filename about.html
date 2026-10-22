@@ -1,86 +1,89 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
     <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <!-- Bootstrap CSS v5.3.8 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
+        <meta
+            name="description"
+            content="Meet Forma: a small, thoughtful collection of well-made everyday goods."
         />
+        <title>Our story — Forma</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="store.js" defer></script>
     </head>
-
     <body>
-        <!-- Nav tabs -->
-        <ul
-            class="nav nav-tabs"
-            id="navId"
-            role="tablist"
-        >
-            <li class="nav-item">
-                <a
-                    href="#tab1Id"
-                    class="nav-link active"
-                    data-bs-toggle="tab"
-                    aria-current="page"
-                    >Active</a
-                >
-            </li>
-            <li class="nav-item dropdown">
-                <a
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    href="#"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Dropdown</a
-                >
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#tab2Id">Action</a>
-                    <a class="dropdown-item" href="#tab3Id">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#tab4Id">Action</a>
+        <div class="announcement">A little more care in every day · Free shipping over $75</div>
+        <header class="site-header">
+            <a class="wordmark" href="index.html" aria-label="Forma home">forma<span>.</span></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Shop</a>
+                <a class="nav-link active" href="about.html" aria-current="page">Our story</a>
+            </nav>
+            <button class="cart-trigger" type="button" data-cart-open aria-label="Open shopping bag">
+                Bag <span class="cart-count" data-cart-count>0</span>
+            </button>
+        </header>
+
+        <main>
+            <section class="about-hero">
+                <p class="eyebrow">A little about us</p>
+                <h1>Good things<br />feel <em>like home.</em></h1>
+                <p class="about-intro">
+                    Forma began with a simple thought: the things we use every day deserve a little more thought.
+                </p>
+                <div class="about-hero-image" role="img" aria-label="A quiet, thoughtfully furnished living space"></div>
+            </section>
+
+            <section class="story-section section-wrap">
+                <div class="story-label"><p class="eyebrow">Our point of view</p></div>
+                <div class="story-copy">
+                    <h2>Keep what matters.<br /><em>Choose it well.</em></h2>
+                    <p>
+                        We make a small collection of useful, lasting pieces for the everyday moments that matter:
+                        a slow cup of coffee, flowers from the market, a table full of friends. Nothing disposable,
+                        nothing just for show—just honest materials and thoughtful design.
+                    </p>
+                    <p>
+                        Working with independent makers and responsible workshops, we choose quality over quantity
+                        and make things you’ll want to keep close for years to come.
+                    </p>
+                    <a class="button button-dark" href="index.html#shop">Shop the collection <span aria-hidden="true">↘</span></a>
                 </div>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a href="#tab5Id" class="nav-link" data-bs-toggle="tab"
-                    >Another link</a
-                >
-            </li>
-            <li class="nav-item" role="presentation">
-                <a href="#" class="nav-link disabled" data-bs-toggle="tab"
-                    >Disabled</a
-                >
-            </li>
-        </ul>
-        
-        <!-- Tab panes -->
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
-                
+            </section>
+
+            <section class="values">
+                <div class="value-card"><span>01</span><h3>Made with care</h3><p>We partner with skilled makers who take pride in every detail.</p></div>
+                <div class="value-card"><span>02</span><h3>Made to last</h3><p>Honest materials, useful forms, and quality you can feel.</p></div>
+                <div class="value-card"><span>03</span><h3>Chosen thoughtfully</h3><p>A considered collection, made in small batches with less waste.</p></div>
+            </section>
+
+            <section class="about-cta">
+                <p class="eyebrow">Find your everyday favorite</p>
+                <h2>Make a little room<br />for <em>Forma.</em></h2>
+                <a class="button button-light" href="index.html#shop">Explore the shop <span aria-hidden="true">↘</span></a>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <a class="wordmark" href="index.html">forma<span>.</span></a>
+            <p>Considered goods for everyday living.</p>
+            <a class="footer-link" href="index.html">Shop the collection</a>
+            <small>© 2026 Forma Goods</small>
+        </footer>
+
+        <div class="cart-backdrop" data-cart-close></div>
+        <aside class="cart-panel" aria-label="Shopping bag" aria-hidden="true">
+            <div class="cart-header">
+                <div><p class="eyebrow">Your good things</p><h2>Your bag <span data-cart-count>(0)</span></h2></div>
+                <button class="icon-button" type="button" data-cart-close aria-label="Close shopping bag">×</button>
             </div>
-            <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-        </div>
-        
-        <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
-        <script>
-            var triggerEl = document.querySelector("#navId a");
-            bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
-        </script>
-        
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
+            <div class="cart-items" data-cart-items></div>
+            <div class="cart-footer">
+                <div class="cart-total"><span>Subtotal</span><strong data-cart-total>$0</strong></div>
+                <p>Shipping and taxes calculated at checkout.</p>
+                <button class="button button-dark checkout-button" type="button" data-checkout>Continue to checkout</button>
+            </div>
+        </aside>
+        <div class="store-message" role="status" aria-live="polite" data-store-message></div>
     </body>
 </html>
